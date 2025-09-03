@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin()
 public class RegistrationController {
 
-    @Autowired
+     @Autowired
     private UserDaoImpl userDao;
 
-    @RequestMapping("/api/register")
+     @RequestMapping("/api/register")
     public User showRegister() {
         return new User();
     }
 
-    @PostMapping("/register")
+     @PostMapping("/register")
     public User addUser(@RequestBody User user, Model model) {
         System.out.println(user.toString());
         userDao.register(user);
