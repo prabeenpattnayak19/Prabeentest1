@@ -1,0 +1,18 @@
+name: Demo Workflows
+on:
+    push:
+jobs:
+   build:
+        name: Build
+        needs: [Development]
+        steps:
+            - name: Build and deploy on Cloud
+   dev:
+        name: Development
+        steps:
+            - name: Run the developer
+   Test:
+        needs: [build, dev]
+        name: Testing
+        steps:
+            - name: Testing the application
