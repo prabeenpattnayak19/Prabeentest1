@@ -1,18 +1,23 @@
 name: Demo Workflows
-on:
-    push: main
+'on':
+  push:
+    branches:
+      - main
 jobs:
-   build:
-        name: Build
-        needs: [Development]
-        steps:
-            - name: Build and deploy on Cloud
-   dev:
-        name: Development
-        steps:
-            - name: Run the developer
-   Test:
-        needs: [build, dev]
-        name: Testing
-        steps:
-            - name: Testing the application
+  build:
+    deploy:
+      name: Deploy
+      runs-on: ubuntu-latest
+      steps:
+        - name: Build and deploy on Cloud
+    dev:
+      name: Development
+      steps:
+        - name: Run the developer
+    Test:
+      needs:
+        - build
+        - dev
+      name: Testing
+      steps:
+        - name: Testing the application
