@@ -29,6 +29,12 @@ public class CartController {
         cartDao.updateDB();
         return true;
     }
+    
+    @RequestMapping("/changeDB")
+    public boolean changeDB(){
+        cartDao.updateDB();
+        return true;
+    }
 
     @PostMapping("/addToCart")
     public NewCart[] increaseQuantity(@RequestBody NewCart[] cart, Model model){
