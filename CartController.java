@@ -42,6 +42,12 @@ public class CartController {
         return cart;
     }
 
+        @PostMapping("/addToCart")
+    public NewCart[] increaseQuantity(@RequestBody NewCart[] cart, Model model){
+        cartDao.addItems(cart);
+        return cart;
+    }
+
     @PostMapping("/addNewItem")
     public boolean addNewItem(@RequestParam("file") MultipartFile file, @RequestParam("newFoodItem") String newFoodData) throws IOException {
         return cartDao.addNewItem(file,newFoodData);
