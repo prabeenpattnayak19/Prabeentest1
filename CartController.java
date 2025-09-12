@@ -51,4 +51,5 @@ public class CartController {
     public boolean checkItemId(@RequestBody String itemId, Model model){
         return !cartDao.itemIdAvailable(itemId);
     }
+
 }

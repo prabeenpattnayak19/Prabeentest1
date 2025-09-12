@@ -11,7 +11,6 @@ public class FoodDaoImpl {
     @Autowired
     private FoodDao foodDao;
 
-
     public List<Food> getFoodList(){
         List<Food> food;
         food = foodDao.findAll();
