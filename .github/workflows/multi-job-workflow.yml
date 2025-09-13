@@ -45,12 +45,6 @@ jobs:
         run: date
       - name: List of Repo Details
         run: ls -al
-      - name: CPU Info
-        run: ls cpu
-      - name: Ram Info
-        run: free -m
-      - name: Display Disk Space
-        run: df -h
       - name: System Network Info
         run: ip address
       - name: Displays the OS information
