@@ -1,6 +1,8 @@
 name: Multi Job Work-Flow
 on:
   - workflow_dispatch # Mannual Trigger
+env: 
+  NODE_ENV: production
 jobs: 
   test: #checking code
     runs-on: ubuntu-latest
