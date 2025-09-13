@@ -3,7 +3,7 @@ on:
   workflow_dispatch: 
 jobs: 
   mannual-trigger:
-    runs-on: ubuntu- latest
+    runs-on: ubuntu-latest
     steps: 
       - name: run
         run: echo "run on mannual trigger"
