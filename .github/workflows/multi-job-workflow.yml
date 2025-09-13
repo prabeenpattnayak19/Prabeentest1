@@ -8,25 +8,21 @@ jobs:
       - name: Test 
         run: echo"Test is Running"
       - name: Welcome
-        run: echo"Welcome to first-job for Test"
-      - name: Sleep Time
-        run: sleep 10 #mannual shell commad
+        run: echo "Welcome to first-job for Test"
+        
   build:  #converting human readble to machine understandbale
     runs-on: ubuntu-latest
     steps: 
       - name: Build
         run: echo"Build is Running"
       - name: Welcome
-        run: echo"Welcome to first-job for build"
-      - name: Sleep Time
-        run: sleep 10
+        run: echo "Welcome to first-job for build"
+
   deploy: 
     runs-on: ubuntu-latest
     steps:
       - name: Deploy
         run: echo"Deploying"
       - name: Welcome
-        run: echo"Welcome to first-job for deploy"
-      - name: Sleep Time
-        run: sleep 10
+        run: echo "Welcome to first-job for deploy"
     
