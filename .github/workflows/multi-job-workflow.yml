@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test 
-        run: echo"Test is Running"
+        run: echo "Test is Running"
       - name: Welcome
         run: echo "Welcome to first-job for Test"
         
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Build
-        run: echo"Build is Running"
+        run: echo "Build is Running"
       - name: Welcome
         run: echo "Welcome to first-job for build"
 
@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy
-        run: echo"Deploying"
+        run: echo "Deploying"
       - name: Welcome
         run: echo "Welcome to first-job for deploy"
     
