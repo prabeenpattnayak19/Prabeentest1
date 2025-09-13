@@ -14,6 +14,7 @@ jobs:
         
   build:  #converting human readble to machine understandbale
     runs-on: ubuntu-latest
+    needs: test
     steps: 
       - name: Build
         run: echo "Build is Running"
@@ -24,6 +25,7 @@ jobs:
 
   deploy: 
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Deploy
         run: echo "Deploying"
