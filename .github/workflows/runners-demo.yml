@@ -1,0 +1,17 @@
+name: Runners Demo
+on: workflow_dispatch
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: OS Info
+        run: cat /rtc/os-release
+      - name: Software Installed
+        run: |
+          java --version
+          node -v
+  job2:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: OS Info
+        run: cat /etc/os-release
