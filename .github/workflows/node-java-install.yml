@@ -8,11 +8,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm install -g bat
-      - run: bat -v
+      - run: npm install -g bats
+      - run: bats -v
   java-version:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v5
       - uses: actions/setup-java@v5
         with:
+          distribution: 'oracle'
           java-version: '11'
